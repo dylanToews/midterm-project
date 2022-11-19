@@ -1,12 +1,17 @@
 const express = require('express');
 const router = express.Router();
 
-//Render Answers page
+//Render Index page
 
 router.get('/', (req, res) => {
-  console.log('answers');
-  res.send("answers");
-  res.render('answers');
+  console.log('index');
+  res.render('index');
 });
+
+
+
+
+
+
 
 module.exports = router;
