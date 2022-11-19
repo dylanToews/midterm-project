@@ -1,0 +1,29 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-success">
+    <a class="navbar-brand" href="/HOMEPAGE">The Simps Quiz</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/CREATEQUIZ">Create a Quiz</a>
+        <a class="nav-item nav-link" href="/MYQUIZZES">My Quizzes</a>
+      </div>
+
+      <% if (user ) { %>
+        <form method="POST" action="/logout">
+          <span>
+            <%= user.email %>
+          </span>
+          <button type="submit">Logout</button>
+        </form>
+        <% } else { %>
+          <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/REGISTER">Register</a>
+          <a class="nav-item nav-link" href="/LOGIN">Login</a>
+        </div>
+          <% } %>
+    </div>
+  </nav>
+</header>

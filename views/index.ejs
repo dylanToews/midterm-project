@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Home Page</title>
+  <title>The Simps Quiz</title>
 
   <meta charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
@@ -18,7 +18,34 @@
 </head>
 
 <body>
-  <h1>Have fun! 🥔</h1>
+  <%- include('partials/_header') %>
+<main style="margin: 1em;">
+  <h3>Quizzes</h3>
+  <table class="quiz_table">
+<thead>
+  <tr>
+    <th scope="col">Title</th>
+    <th scope="col">Creator</th>
+    <th scope="col">Description</th>
+    <th scope="col">Share Link</th>
+
+  </tr>
+
+</thead>
+<tbody>
+  <tr>
+    <td scope="col">First Quiz</td>
+    <td scope="col">David</td>
+    <td scope="col">Test Description</td>
+    <td> <form method="GET" action="/">
+      <button type="submit">Share </button>
+    </form> </td>
+
+  </tr>
+</tbody>
+  </table>
+</main>
+
 </body>
 
 </html>
