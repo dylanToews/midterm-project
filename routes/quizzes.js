@@ -1,9 +1,9 @@
 const express = require('express');
 const router  = express.Router();
 
-router.get('/quizzes', (req, res) => {
-  console.log('banana')
-  res.send('something happened');
+router.get('/', (req, res) => {
+  console.log('quizzes')
+  res.send('quizzes');
 });
 
 module.exports = router;

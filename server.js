@@ -47,8 +47,8 @@ app.use('/quizzes', quizzesRoutes)
 // Separate them into separate routes files (see above).
 
 app.get('/', (req, res) => {
-  res.send('banana');
-  console.log('taco')
+  res.render('index');
+  console.log('index')
 });
 
 app.listen(PORT, () => {
