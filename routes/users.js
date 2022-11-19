@@ -9,10 +9,10 @@ const express = require('express');
 const router  = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('users');
+  res.send('banana');
 });
 
 module.exports = router;
 
 
-//making sure this is on seperate branch 
+//making sure this is on seperate branch
