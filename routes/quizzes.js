@@ -2,17 +2,31 @@ const express = require('express');
 const router  = express.Router();
 const testdb = require('./testdb')
 
+//Test database
+
+const quizDatabase = {
+  quiz1: 'rep q1',
+  quiz2: 'rep q2'
+};
+
+
 //Render quizzes page
 
-router.get('/quizzes/:id', (req, res) => {
-  console.log(testdb)
-  res.send('quizzes');
-  //res.render('quizzes');
+router.get('/quizzes/:quiz2', (req, res) => {
+  const params = req.params
+  console.log(params)
+  const templateVars = {
+    quizDatabase
+  }
+  console.log('db', templateVars)
+
+  res.render("testquizzes", templateVars);
 });
+
 
 /* Load quiz based on id
 
-user:id: req.session.user_id
+
 
 
 */
