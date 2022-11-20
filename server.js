@@ -44,9 +44,11 @@ const indexRoutes = require('./routes/index-routes');
 app.use('/api/users', userApiRoutes);
 app.use('/api/widgets', widgetApiRoutes);
 app.use('/users', usersRoutes);
-app.use('/quizzes', quizzesRoutes);
-app.use('/create', createRoutes);
-app.use('/answers', answerRoutes);
+
+
+app.use('/', quizzesRoutes);
+app.use('/', createRoutes);
+app.use('/', answerRoutes);
 app.use('/', indexRoutes);
 
 

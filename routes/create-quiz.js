@@ -3,10 +3,20 @@ const router = express.Router();
 
 //Render Create Quiz page
 
-router.get('/', (req, res) => {
+router.get('/create', (req, res) => {
   console.log('create quiz');
   res.send('create quiz');
-  res.render('create');
+  //res.render('create');
 });
 
+
+
+
+
+
+
+
 module.exports = router;
+
+
+

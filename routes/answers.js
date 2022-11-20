@@ -3,10 +3,11 @@ const router = express.Router();
 
 //Render Answers page
 
-router.get('/', (req, res) => {
+router.get('/answers', (req, res) => {
   console.log('answers');
   res.send("answers");
-  res.render('answers');
+  //res.render('answers');
 });
 
 module.exports = router;
+
