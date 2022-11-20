@@ -4,7 +4,7 @@ const testdb = require('./testdb')
 
 //Render quizzes page
 
-router.get('/quizzes', (req, res) => {
+router.get('/quizzes/:id', (req, res) => {
   console.log(testdb)
   res.send('quizzes');
   //res.render('quizzes');
