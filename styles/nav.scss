@@ -1,15 +1,22 @@
 /*
 GLOBAL
+*/
 
-#navbar-main {
+nav {
   height: 120px;
   width: 100%;
-  color: #ccf15e;
+  // color: #ccf15e;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #51a8e5;
   background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
+  position: fixed;
 
 }
-*/
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: larger;
+  // color: #ccf15e;
+}
