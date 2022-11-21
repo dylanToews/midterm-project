@@ -31,7 +31,7 @@ app.use(express.static('public'));
 const userApiRoutes = require('./routes/users-api');
 const widgetApiRoutes = require('./routes/widgets-api');
 const usersRoutes = require('./routes/users');
-const quizzesRoutes = require('./routes/quizzes');
+const quizzesRoutes = require('./routes/ind-quiz');
 const createRoutes = require('./routes/create-quiz');
 const answerRoutes = require('./routes/answers');
 const indexRoutes = require('./routes/index-routes');
