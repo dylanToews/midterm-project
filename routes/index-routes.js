@@ -1,17 +1,18 @@
 const express = require('express');
-const router = express.Router();
+const router  = express.Router();
+const quizQueries = require('../db/queries/getAllQuizzes');
 
-//Render Index page
-
-// router.get('/', (req, res) => {
-//   console.log('index');
-//   res.render('testindex');
-// });
-
-
-
-
-
-
+router.get('/', (req, res) => {
+  quizQueries.getAllQuizzes()
+    .then(users => {
+      res.json({ users });
+      console.log('getAllQuizzes function called')
+    })
+    .catch(err => {
+      res
+        .status(500)
+        .json({ error: err.message });
+    });
+});
 
 module.exports = router;

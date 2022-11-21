@@ -34,7 +34,7 @@ const usersRoutes = require('./routes/users');
 const quizzesRoutes = require('./routes/quizzes');
 const createRoutes = require('./routes/create-quiz');
 const answerRoutes = require('./routes/answers');
-const indexRoutes = require('./routes/testindexroute');
+const indexRoutes = require('./routes/index-routes');
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
