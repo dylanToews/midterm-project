@@ -3,10 +3,10 @@ const router = express.Router();
 
 //Render Index page
 
-router.get('/', (req, res) => {
-  console.log('index');
-  res.render('testindex');
-});
+// router.get('/', (req, res) => {
+//   console.log('index');
+//   res.render('testindex');
+// });
 
 
 

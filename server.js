@@ -45,6 +45,12 @@ app.use('/api/users', userApiRoutes);
 app.use('/api/widgets', widgetApiRoutes);
 app.use('/users', usersRoutes);
 
+//test api for rendering all content on index page
+
+// const apiRouter = express.Router();
+// indexRoutes(apiRouter, database);
+// app.use('/api', apiRouter);
+
 
 app.use('/', quizzesRoutes);
 app.use('/', createRoutes);
