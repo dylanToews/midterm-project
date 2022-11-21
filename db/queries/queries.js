@@ -19,7 +19,7 @@ const getAllQuizzes = () => {
 };
 
 
-//Function to get one quiz based on ID. Need to be able to change the ID based on what the user clicks on the index page
+//Function to get one quiz based on Id. Quiz Id is hardcoded in at the moment 
 
 const getOneQuiz = () => {
   return db.query(
@@ -31,7 +31,35 @@ const getOneQuiz = () => {
     });
 };
 
+//To get specific quiz based on ID. Untested as on 8:00 AM MTN/Nov 21
+
+const getQuizFromId = function(id) {
+  return db
+    .query(`SELECT * FROM quizzes WHERE id = $1`, [id])
+    .then((result) => {
+      return result.rows[0];
+    })
+    .catch((err) => {
+      console.log('myerror:', err.message);
+    });
+};
+
+
+const addQuiz = function(quiz) {
+  const queryParams = [];
+  let queryString = `INSERT INTO quizzes (
+    id, title, description, share_link, private, url,
+  )`
 
 
 
-module.exports = { getUsers, getAllQuizzes, getOneQuiz };
+};
+
+
+
+
+
+module.exports = { getUsers, getAllQuizzes, getOneQuiz, getQuizFromId };
+
+
+
