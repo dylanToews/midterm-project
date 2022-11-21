@@ -19,7 +19,7 @@ const getAllQuizzes = () => {
 };
 
 
-//Function to get one quiz based on Id. Quiz Id is hardcoded in at the moment 
+//Function to get one quiz based on Id. Quiz Id is hardcoded in at the moment
 
 const getOneQuiz = () => {
   return db.query(
@@ -35,7 +35,7 @@ const getOneQuiz = () => {
 
 const getQuizFromId = function(id) {
   return db
-    .query(`SELECT * FROM quizzes WHERE id = $1`, [id])
+    .query(`SELECT * FROM questions WHERE id = $1`, [id])
     .then((result) => {
       return result.rows[0];
     })
