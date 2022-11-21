@@ -35,7 +35,7 @@
           <% for (let key in quizzes) { %>
           <tr class="table-row">
             <th scope="row"><%= quizzes[key].title %></th>
-            <td>creator</td>
+            <td><%= quizzes[key].name %></td>
             <td><%= quizzes[key].description %></td>
             <td>
             <a href="/quiz/<%= quizzes[key].id %>">

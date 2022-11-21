@@ -8,15 +8,16 @@
 
   <title>Simps Quiz Time</title>
 
-      <!--App CSS-->
-      <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-      <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!--App CSS-->
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
 
-      <!--Bootstrap CSS-->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!--Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-      
+
 </head>
 
 <body>
@@ -31,19 +32,26 @@
       <article class="quiz-container">
 
         <section>
-          <p>Created by: David</p>
+          <p>Created by: <%=quiz.name%>
+          </p>
           <div>
-            <p>A quiz to test how much you know about Homer</p>
+            <p><%= quiz.description%></p>
           </div>
         </section>
         <section class="question-wrapper">
-          <p class="question"><%= quiz.question_content%></p>
+          <p class="question">
+            <%= quiz.question_content%>
+          </p>
         </section>
         <form class="begin answer-wrapper">
-          <p class="correct-answer">A) <%= quiz.correct_answer%></p>
-          <p class="wrong-answer1">B) WOHOO!</p>
-          <p class="wrong-answer2">C) Why you Little!</p>
-          <p class="wrong-answer3">D) mmmhmmm Donut!</p>
+          <p class="correct-answer">A) <%= quiz.correct_answer%>
+          </p>
+          <p class="wrong-answer1">B) <%= quiz.incorrect_1%>
+          </p>
+          <p class="wrong-answer2">C) <%= quiz.incorrect_2%>
+          </p>
+          <p class="wrong-answer3">D) <%= quiz.incorrect_3%>
+          </p>
           <button type="button" class="submit-answer" disabled>Submit</button>
         </form>
 

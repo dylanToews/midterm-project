@@ -12,11 +12,23 @@ const getUsers = () => {
 //Renders all the quizzes
 
 const getAllQuizzes = () => {
-  return db.query('SELECT * FROM quizzes;')
+  return db.query(`SELECT *
+  FROM quizzes
+  INNER JOIN users ON quizzes.id = users.id`)
     .then(data => {
       return data.rows;
     });
 };
+
+//working version without join
+
+// const getAllQuizzes = () => {
+//   return db.query(`SELECT * FROM quizzes`)
+//     .then(data => {
+//       return data.rows;
+//     });
+// };
+
 
 
 //To get specific quiz based on ID
@@ -24,7 +36,9 @@ const getAllQuizzes = () => {
 const getQuizFromId = function(id) {
   return db
     .query(`SELECT * FROM questions
-    WHERE id = $1`, [id])
+    INNER JOIN users on questions.id = users.id
+    INNER JOIN quizzes ON questions.id = quizzes.id
+    WHERE questions.id = $1`, [id])
     .then((result) => {
       return result.rows[0];
     })
