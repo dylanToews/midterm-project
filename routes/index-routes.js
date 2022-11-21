@@ -23,13 +23,12 @@ router.get('/', (req, res) => {
   //res.render('index')
   quizQueries.getAllQuizzes()
     .then(result => {
-      const dataObj = result
       const templateVars = {
         quizzes : result
 
       }
       //const test = 'this is a test'
-      console.log(result)
+      console.log('index template vars', templateVars)
       res.render('index', templateVars);
       //res.json({ result })
 

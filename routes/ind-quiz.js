@@ -20,9 +20,12 @@ const quizQueries = require('../db/queries/queries');
 router.get('/quiz/:id', (req, res) => {
   const id = req.params.id
   quizQueries.getQuizFromId(id)
-    .then(users => {
-      res.json({ users });
-      console.log('getQuizFromId function called')
+    .then(result => {
+      const templateVars = {
+        quiz: result
+      }
+      console.log('quiz templatevars', templateVars)
+      res.render('quiz', templateVars)
     })
     .catch(err => {
       res
