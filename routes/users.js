@@ -9,7 +9,11 @@ const express = require('express');
 const router  = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('users');
-}); 
+  console.log('users')
+  res.send('users');
+});
 
 module.exports = router;
+
+
+//making sure this is on seperate branch
