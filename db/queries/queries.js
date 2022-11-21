@@ -19,23 +19,12 @@ const getAllQuizzes = () => {
 };
 
 
-//Function to get one quiz based on Id. Quiz Id is hardcoded in at the moment
-
-const getOneQuiz = () => {
-  return db.query(
-    `SELECT *
-      FROM questions
-      WHERE id = 1;`)
-    .then(data => {
-      return data.rows;
-    });
-};
-
 //To get specific quiz based on ID
 
 const getQuizFromId = function(id) {
   return db
-    .query(`SELECT * FROM questions WHERE id = $1`, [id])
+    .query(`SELECT * FROM questions
+    WHERE id = $1`, [id])
     .then((result) => {
       return result.rows[0];
     })
@@ -59,7 +48,7 @@ const addQuiz = function(quiz) {
 
 
 
-module.exports = { getUsers, getAllQuizzes, getOneQuiz, getQuizFromId };
+module.exports = { getUsers, getAllQuizzes, getQuizFromId };
 
 
 
