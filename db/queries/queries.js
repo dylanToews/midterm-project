@@ -31,7 +31,7 @@ const getOneQuiz = () => {
     });
 };
 
-//To get specific quiz based on ID. Untested as on 8:00 AM MTN/Nov 21
+//To get specific quiz based on ID
 
 const getQuizFromId = function(id) {
   return db

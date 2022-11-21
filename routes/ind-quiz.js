@@ -22,7 +22,7 @@ router.get('/quiz/:id', (req, res) => {
   quizQueries.getQuizFromId(id)
     .then(users => {
       res.json({ users });
-      console.log('getOneQuiz function called')
+      console.log('getQuizFromId function called')
     })
     .catch(err => {
       res
@@ -31,14 +31,6 @@ router.get('/quiz/:id', (req, res) => {
     });
 });
 
-
-// router.get("/:id", (req, res) => {
-//   const id = req.params.id
-
-//       res.render("quizzes", id)
-
-
-// });
 
 
 module.exports = router;
