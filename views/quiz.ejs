@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <meta name="description" content="This is a quiz designed for basic HTML, CSS, and JavaScript basics.">
+
+  <title>Simps Quiz Time</title>
+</head>
+
+<body>
+  <%- include('partials/_header') %>
+    <header>
+      <section class="quiz-info">
+        <h1>Homer's Quiz</h1>
+      </section>
+    </header>
+
+    <main>
+      <article class="quiz-container">
+        <section>
+          <p>Created by: David</p>
+          <div>
+            <p>A quiz to test how much you know about Homer</p>
+          </div>
+        </section>
+        <section class="question-wrapper">
+          <p class="question">What does Homer say when he makes a mistake?</p>
+        </section>
+        <form class="begin answer-wrapper">
+          <p class="correct-answer">1) DOH!</p>
+          <p class="wrong-answer1">2) WOHOO!</p>
+          <p class="wrong-answer2">3) Why you Little!</p>
+          <p class="wrong-answer3">4) mmmhmmm Donut!</p>
+          <button type="button" class="submit-answer" disabled>Submit</button>
+        </form>
+      </article>
+    </main>
+
+    <footer>
+      <section>
+        <p class="progress-fill">
+          Progress: <span class="progress-count">1 / 10</span>
+        </p>
+      </section>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
