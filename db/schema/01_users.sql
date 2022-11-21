@@ -18,7 +18,6 @@ CREATE TABLE quizzes (
   id SERIAL PRIMARY KEY NOT NULL,
   title VARCHAR(255) NOT NULL,
   description VARCHAR(255) NOT NULL,
-  share_link VARCHAR(255) NOT NULL,
   private BOOLEAN,
   url VARCHAR(255) NOT NULL,
   user_quiz_id INTEGER REFERENCES user_quizzes(id) ON DELETE CASCADE
