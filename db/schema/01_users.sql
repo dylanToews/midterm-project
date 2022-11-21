@@ -1,35 +1,10 @@
--- Drop and recreate Users table (Example)
+-- Drop and recreate Users table
 
 DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users (
   id SERIAL PRIMARY KEY NOT NULL,
-  name VARCHAR(255) NOT NULL,
+  fullname VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL
 );
 
-DROP TABLE IF EXISTS user_quizzes CASCADE;
-CREATE TABLE user_quizzes (
-  id SERIAL PRIMARY KEY NOT NULL,
-  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE 
-);
 
-DROP TABLE IF EXISTS quizzes CASCADE;
-CREATE TABLE quizzes (
-  id SERIAL PRIMARY KEY NOT NULL,
-  title VARCHAR(255) NOT NULL,
-  description VARCHAR(255) NOT NULL,
-  private BOOLEAN,
-  url VARCHAR(255) NOT NULL,
-  user_quiz_id INTEGER REFERENCES user_quizzes(id) ON DELETE CASCADE
-);
-
-DROP TABLE IF EXISTS questions CASCADE;
-CREATE TABLE questions (
-  id SERIAL PRIMARY KEY NOT NULL,
-  question_content VARCHAR(255) NOT NULL,
-  correct_answer VARCHAR(255) NOT NULL,
-  wrong_answer1 VARCHAR(255) NOT NULL,
-  wrong_answer2 VARCHAR(255) NOT NULL,
-  wrong_answer3 VARCHAR(255) NOT NULL,
-  quiz_id INTEGER REFERENCES quizzes(id) ON DELETE CASCADE
-);

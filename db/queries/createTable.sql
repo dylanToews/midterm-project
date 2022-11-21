@@ -6,19 +6,29 @@ const creatQuiz = () => {
     title,
     description,
     private,
-    user_quiz_id
+    ctreator_id
     )
-    VALUSE ($1, $2, $3, $4) 
+    VALUES ($1, $2, $3, $4) 
     RETURNING*;
- *** We should know the generated id to insert into question tables ***
+    `
+    return pool.query(queryString , Object.values(quiz))
+    .then(data => {
+      creatQuestion(quiz_id);
+      return data.rows;
+    });
+
+ /*** We should know the generated id to insert into question tables ***/
+  const creatQuestion = () => {
+  const queryString = `
   INSERT INTO questions( 
     question_content,
     correct_answer,
     wrong_answer1,
     wrong_answer2,
-    wrong_answer3
+    wrong_answer3,
+    quiz_id
     )
-    VALUES ($5, $6, $7, $8, $9)
+    VALUES ($5, $6, $7, $8, $9 , ${quiz_id})
     RETURNING*;
     ` 
   return pool.query(queryString , Object.values(quiz))
@@ -28,3 +38,4 @@ const creatQuiz = () => {
 };
 
 module.exports = { creatQuiz };
+module.exports = { creatQuestion };
