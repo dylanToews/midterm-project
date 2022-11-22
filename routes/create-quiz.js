@@ -11,7 +11,26 @@ router.get('/create', (req, res) => {
 
 router.post('/create', (req, res) => {
 
+  const {title, description, creator, question, answer, incorrect1, incorrect2, incorrect3 } = req.body
 
+  console.log("req.body",req.body)
+  console.log("question/answer", question, answer)
+
+  // console.log(test)
+
+  quizQueries.addQuiz(title, description)
+  .then (data => {
+    console.log('inserted quiz record', data)
+    const id = data.id
+    // console.lo
+    return quizQueries.addQuestion(id, question, answer, incorrect1, incorrect2, incorrect3)
+
+
+  })
+  .then (data => {
+//set cookie to questions id 
+    res.redirect('/')
+  })
 
 })
 

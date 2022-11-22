@@ -14,20 +14,11 @@ const getUsers = () => {
 const getAllQuizzes = () => {
   return db.query(`SELECT *
   FROM quizzes
-  INNER JOIN users ON quizzes.id = users.id`)
+  LEFT JOIN users ON quizzes.id = users.id`)
     .then(data => {
       return data.rows;
     });
 };
-
-//working version without join
-
-// const getAllQuizzes = () => {
-//   return db.query(`SELECT * FROM quizzes`)
-//     .then(data => {
-//       return data.rows;
-//     });
-// };
 
 
 
@@ -48,13 +39,41 @@ const getQuizFromId = function(id) {
 };
 
 
-const addQuiz = function(quiz) {
+
+const addQuiz = function(title, description) {
   const queryParams = [];
-  let queryString = `INSERT INTO quizzes (
-    id, title, description, share_link, private, url,
-  )`
+
+  let values = '';
+
+  let queryString = `INSERT INTO quizzes (title, description)
+  VALUES ( $1, $2) RETURNING * ;`;
+
+  // console.log('qstring:', queryString, 'qparams:', queryParams);
+
+  return db.query(queryString, [title, description])
+    .then(res => {
+      //creatQuestion(quiz_id);
+      return res.rows[0];
+    });
+};
+
+const addQuestion = function(id, question, correctAnswer, incorrect1, incorrect2, incorrect3) {
+
+  const queryParams = [];
+
+  let values = '';
+
+  let queryString = `INSERT INTO questions (id, question_content, correct_answer, incorrect_1, incorrect_2, incorrect_3)
+  VALUES ( $1, $2, $3, $4, $5, $6) RETURNING * ;`;
 
 
+  // console.log('qstring:', queryString, 'qparams:', queryParams);
+
+  return db.query(queryString, [id, question, correctAnswer, incorrect1, incorrect2, incorrect3])
+
+    .then(res => {
+      return res.rows[0];
+    });
 
 };
 
@@ -62,7 +81,9 @@ const addQuiz = function(quiz) {
 
 
 
-module.exports = { getUsers, getAllQuizzes, getQuizFromId };
+
+
+module.exports = { getUsers, getAllQuizzes, getQuizFromId, addQuiz, addQuestion };
 
 
 
