@@ -1,19 +1,35 @@
+#content-container {
+  position: absolute;
+  padding-top: 120px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
-// body {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   min-height: 100vh;
+  width: 90%;
+}
 
-//   background: rgb(163, 208, 219);
-//   background: linear-gradient(
-//     227deg,
-//     rgba(163, 208, 219, 1) 0%,
-//     rgba(163, 176, 219, 1) 20%,
-//     rgba(163, 173, 219, 1) 34%,
-//     rgba(163, 219, 208, 1) 59%,
-//     rgba(163, 208, 219, 1) 74%,
-//     rgba(163, 208, 219, 1) 100%
-//   );
-// }
+.quiz-table-container {
+// width: 90%;
+}
+
+
+
+#table-header{
+  border: 1px solid;
+  border-collapse: separate;
+  border-spacing: 5rem
+
+}
+
+.table-row {
+  border: 1px solid;
+  border-collapse: separate;
+  border-spacing: 5rem;
+}
+
+tbody :hover {
+  box-shadow: 0 0 11px grey;
+}
+
+
+
+

@@ -3,6 +3,7 @@ const router  = express.Router();
 const quizQueries = require('../db/queries/queries');
 
 router.get('/', (req, res) => {
+  res.render('index')
   quizQueries.getAllQuizzes()
     .then(users => {
       res.json({ users });
