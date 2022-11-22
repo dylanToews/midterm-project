@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/create', (req, res) => {
   console.log('create quiz');
-  // res.send('create quiz');
+  //res.send('create quiz');
   res.render('create');
 });
 

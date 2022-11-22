@@ -1,12 +1,17 @@
 const express = require('express');
-const router  = express.Router();
+const router = express.Router();
 const quizQueries = require('../db/queries/queries');
 
-router.get('/quizzes', (req, res) => {
-  quizQueries.getOneQuiz()
-    .then(users => {
-      res.json({ users });
-      console.log('getOneQuiz function called')
+
+
+router.get('/quiz/:id', (req, res) => {
+  const id = req.params.id;
+  quizQueries.getQuizFromId(id)
+    .then(result => {
+      const templateVars = {
+        quiz: result,
+      };
+      res.render('quiz', templateVars);
     })
     .catch(err => {
       res
@@ -14,5 +19,7 @@ router.get('/quizzes', (req, res) => {
         .json({ error: err.message });
     });
 }); 
+
+
 
 module.exports = router;

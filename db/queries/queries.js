@@ -12,30 +12,33 @@ const getUsers = () => {
 //Renders all the quizzes
 
 const getAllQuizzes = () => {
-  return db.query('SELECT * FROM quizzes;')
+  return db.query(`SELECT *
+  FROM quizzes
+  INNER JOIN users ON quizzes.id = users.id`)
     .then(data => {
       return data.rows;
     });
 };
 
+//working version without join
 
-//Function to get one quiz based on Id. Quiz Id is hardcoded in at the moment 
+// const getAllQuizzes = () => {
+//   return db.query(`SELECT * FROM quizzes`)
+//     .then(data => {
+//       return data.rows;
+//     });
+// };
 
-const getOneQuiz = () => {
-  return db.query(
-    `SELECT *
-      FROM questions
-      WHERE id = 1;`)
-    .then(data => {
-      return data.rows;
-    });
-};
 
-//To get specific quiz based on ID. Untested as on 8:00 AM MTN/Nov 21
+
+//To get specific quiz based on ID
 
 const getQuizFromId = function(id) {
   return db
-    .query(`SELECT * FROM quizzes WHERE id = $1`, [id])
+    .query(`SELECT * FROM questions
+    INNER JOIN users on questions.id = users.id
+    INNER JOIN quizzes ON questions.id = quizzes.id
+    WHERE questions.id = $1`, [id])
     .then((result) => {
       return result.rows[0];
     })
@@ -59,7 +62,7 @@ const addQuiz = function(quiz) {
 
 
 
-module.exports = { getUsers, getAllQuizzes, getOneQuiz, getQuizFromId };
+module.exports = { getUsers, getAllQuizzes, getQuizFromId };
 
 
 
