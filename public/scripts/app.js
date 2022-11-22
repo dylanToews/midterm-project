@@ -12,7 +12,7 @@ if (answer == correctAnswer) {
     formname.innerHTML ="<div style='background-color:lightgreen'><h1>CORRECT!! The answer was: " + correctAnswer + "</h1></div>";
 }
 else {
-  console.log(correctAnswer)
+  console.log('anything2')
     formname.innerHTML ="<div style='background-color:pink'><h1>DOH! You were wrong! The answer was: " + correctAnswer + "</h1></div>";
 }
 };
