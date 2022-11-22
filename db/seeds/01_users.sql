@@ -4,15 +4,17 @@ INSERT INTO users VALUES (2, 'David', 'David@gmail.com');
 INSERT INTO users VALUES (3, 'Dylan', 'Dylan@gmail.com');
 INSERT INTO users VALUES (4, 'Admin', 'Admin@gmail.com');
 
--- user_quizzes table seeds --
-INSERT INTO user_quizzes VALUES (1, 1);
-INSERT INTO user_quizzes VALUES (2, 2);
-INSERT INTO user_quizzes VALUES (3, 3);
-
 -- quizzes table seeds --
 INSERT INTO quizzes VALUES (1, 'quiz 1', 'quiz 1 description', false, 'www.example.com', 1);
 INSERT INTO quizzes VALUES (2, 'quiz 2', 'quiz 2 description', false, 'www.example2.com', 2);
 INSERT INTO quizzes VALUES (3, 'quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+
+-- user_quizzes table seeds --
+INSERT INTO user_quizzes VALUES (1, 1 ,1);
+INSERT INTO user_quizzes VALUES (2, 2, 1);
+INSERT INTO user_quizzes VALUES (3, 3, 2);
+INSERT INTO user_quizzes VALUES (4, 2, 3);
+
 
 -- questions table seeds --
 INSERT INTO questions VALUES (1, 'question 1 ?', 'corrct answer', 'wrong answer 1', 'wrong answer 2', 'wrong answer 3', 1);
