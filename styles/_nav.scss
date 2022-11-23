@@ -9,7 +9,7 @@ header {
   height: 120px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-image: url("https://i.imgur.com/kulXEd1.png");
   background-position: center;
@@ -22,9 +22,15 @@ header {
   flex-direction: row;
 }
 
+#quiz-create-login-link {
+  display: flex;
+flex-direction: row;
+
+}
+
 .nav-item {
-  font-size: 45px;
-  padding-right: 2rem;
+  font-size: 30px;
+  padding-right: 3rem;
   text-decoration: none;
 }
 
