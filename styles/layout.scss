@@ -1,17 +1,23 @@
-html, body {
-  background: rgb(16,246,236);
-  background: linear-gradient(0deg, rgba(16,246,236,0.7373737373737373) 15%, rgba(242,211,45,0.9976303317535545) 83%);
+////////////////////////////////////**GLOBAL**////////////////////////////////////
+
+html,
+body {
+  background: rgb(19, 246, 255);
+  background: linear-gradient(0deg, rgba(19, 246, 255, 1) 23%, rgba(254, 212, 32, 0.9727891156462585) 74%);
   background-size: cover;
   background-position: fixed;
+  background-repeat: no-repeat;
   margin: 0px;
   padding: 0px;
   height: 100%;
   font-family: 'Homer Simpson Revised', sans-serif;
-  }
+}
 
-  #footer-pic {
-    position: fixed;
-    // background-repeat: no-repeat;
-    bottom: 0;
-    // opacity: 0.8;
-  }
+footer {
+  background: rgb(19, 246, 255);
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  bottom: 0;
+}
+
