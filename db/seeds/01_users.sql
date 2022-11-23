@@ -17,7 +17,7 @@ INSERT INTO user_quizzes VALUES (4, 2, 3);
 
 
 -- questions table seeds --
-INSERT INTO questions VALUES (1, 'question 1 ?', 'corrct answer', 'wrong answer 1', 'wrong answer 2', 'wrong answer 3', 1);
+INSERT INTO questions VALUES (1, 'question 1  test ?', 'corrct answer', 'wrong answer 1', 'wrong answer 2', 'wrong answer 3', 1);
 INSERT INTO questions VALUES (2, 'question 2 ?', 'corrct answer', 'wrong answer 1', 'wrong answer 2', 'wrong answer 3', 1);
 INSERT INTO questions VALUES (3, 'question 3 ?', 'corrct answer', 'wrong answer 1', 'wrong answer 2', 'wrong answer 3', 2);
 INSERT INTO questions VALUES (4, 'question 4 ?', 'corrct answer', 'wrong answer 1', 'wrong answer 2', 'wrong answer 3', 2);
