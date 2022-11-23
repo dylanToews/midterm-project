@@ -7,16 +7,16 @@
 }
 
 body::-webkit-scrollbar {
-background-color: transparent;
+  background-color: transparent;
 }
 
 body::-webkit-scrollbar-track {
-background-color: transparent;
+  background-color: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
-background-color: rgb(237, 221, 238);
-opacity: 0.3;
+  background-color: rgb(237, 221, 238);
+  opacity: 0.3;
 }
 
 .cell {
@@ -24,14 +24,7 @@ opacity: 0.3;
   align-items: center;
   padding-right: 1rem;
   overflow: hidden !important;
-  width: fit-content;
-  block-size: fit-content;
-  max-width: 150px;
   caption-side: bottom;
-}
-
-.test {
-  width: 100%;
 }
 
 #description-cell {
@@ -41,12 +34,9 @@ opacity: 0.3;
 }
 
 #header-row {
-  width: 88%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
   margin-top: 2rem;
-  padding: 1rem;
   font-size: 30px;
   font-weight: 400;
   border-style: outset;
@@ -56,10 +46,7 @@ opacity: 0.3;
 
 
 .quiz-row {
-  width: 90%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   margin-top: 2rem;
   font-size: 30px;
@@ -77,4 +64,3 @@ opacity: 0.3;
 
 
 ////////////////////////////////////**TABLET**////////////////////////////////////
-
