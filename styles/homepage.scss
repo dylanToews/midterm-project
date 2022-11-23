@@ -1,0 +1,71 @@
+//TABLE LAYOUT AND STYLES///
+
+#content-container {
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 130px;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+
+#content-container::-webkit-scrollbar {
+// background-color: red;
+}
+
+#content-container::-webkit-scrollbar-track {
+// background-color: blue;
+}
+
+#content-container::-webkit-scrollbar-thumb {
+// background-color: pink;
+}
+
+
+.cell {
+  display: inline-block;
+  align-items: center;
+}
+
+
+.table {
+  display: table;
+}
+
+
+#header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 2px solid black;
+  font-size: x-large;
+  font-weight: 400;
+  border-style: outset;
+  border-width: 7px;
+  border-color: rgb(235, 204, 238);
+}
+
+
+.quiz-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: x-large;
+  border-style: outset;
+  border-width: 7px;
+  border-color: rgb(235, 204, 238);
+}
+
+
+.quiz-row:hover {
+  box-shadow: 0 0 20px rgb(253, 101, 220);
+}
+
+.link {
+  margin-right: 2.5rem;
+}

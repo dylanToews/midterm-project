@@ -3,6 +3,7 @@ GLOBAL
 */
 
 #navbar-main {
+  z-index: 10;
   padding-right: 1rem;
   padding-left: 1rem;
   height: 120px;
@@ -20,9 +21,21 @@ GLOBAL
   font-family: 'Homer Simpson Revised', sans-serif;
 }
 
-#navbar-links {
+#navbar-nav {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-item {
+font-size: x-large;
+}
+
+#nav-link :hover {
+  text-shadow: 3px 3px 8px turquoise;
+}
+
+#navbar-mainhover {
+  flex: display;
 }
 
 
