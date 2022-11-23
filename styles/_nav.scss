@@ -1,6 +1,4 @@
-/*
-GLOBAL
-*/
+////////////////////////////////////**GLOBAL&DESKTOP**////////////////////////////////////
 
 #navbar-main {
   z-index: 10;
@@ -24,10 +22,13 @@ GLOBAL
 #navbar-nav {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
 }
 
 .nav-item {
-font-size: x-large;
+  font-size: 45px;
+  padding-right: 2rem;
+  text-decoration: none;
 }
 
 #nav-link :hover {
@@ -41,5 +42,10 @@ font-size: x-large;
 
 .navbar-brand {
   font-weight: bold;
-  font-size: xx-large;
+  font-size: 60px;
+  text-decoration: none;
 }
+
+
+////////////////////////////////////**TABLET**////////////////////////////////////
+

@@ -24,15 +24,15 @@ INSERT INTO users VALUES (20, 'test16', 'test1@gmail.com');
 -- quizzes table seeds --
 INSERT INTO quizzes VALUES (1, 'quiz 1', 'quiz 1 description', false, 'www.example.com', 1);
 INSERT INTO quizzes VALUES (2, 'quiz 2', 'quiz 2 description', false, 'www.example2.com', 2);
-INSERT INTO quizzes VALUES (3, 'quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes VALUES (3, 'quiz 3', 'quiz 3 dessdfsfss fa fsaf asf asfsf asf saf s fsafd sf sf aasf sdfasf sdf sadfacription', true, 'www.example3.com', 3);
 INSERT INTO quizzes VALUES (4, 'quiz 4', 'quiz 4 description', true, 'www.example3.com', 3);
-INSERT INTO quizzes VALUES (5, 'quiz 5', 'quiz 5 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes VALUES (5, 'quiz 5', 'quiz 5 descriptrwerwerwe r wer we rwrergesgeg gesrg  sgddf gs gd gfion', true, 'www.example3.com', 3);
 INSERT INTO quizzes VALUES (6, 'quiz 6', 'quiz 6 description', true, 'www.example3.com', 3);
 INSERT INTO quizzes VALUES (7, 'quiz 7', 'quiz 7 description', true, 'www.example3.com', 3);
 INSERT INTO quizzes VALUES (8, 'quiz 8', 'quiz 8 description', true, 'www.example3.com', 3);
 INSERT INTO quizzes VALUES (9, 'quiz 9', 'quiz 9 description', true, 'www.example3.com', 3);
 INSERT INTO quizzes VALUES (10, 'quiz 10', 'quiz 10 description', true, 'www.example3.com', 3);
-INSERT INTO quizzes VALUES (11, 'quiz 11', 'quiz 11description', true, 'www.example3.com', 3);
+INSERT INTO quizzes VALUES (11, 'quiz 11', 'quiz 11dewerwerrwrwerwerwerwerwerwerwerwerwerwerwerwerwerwerwerwerwerwerwerwerwerwerwerwerwerwscription', true, 'www.example3.com', 3);
 INSERT INTO quizzes VALUES (12, 'quiz 12', 'quiz 12escription', true, 'www.example3.com', 3);
 INSERT INTO quizzes VALUES (13, 'quiz 13', 'quiz 3 d13scription', true, 'www.example3.com', 3);
 INSERT INTO quizzes VALUES (14, 'quiz 14', 'quiz 3 de14cription', true, 'www.example3.com', 3);
