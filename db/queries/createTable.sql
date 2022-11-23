@@ -28,7 +28,7 @@ const creatQuiz = () => {
     wrong_answer3,
     quiz_id
     )
-    VALUES ($5, $6, $7, $8, $9 , ${quiz_id})
+    VALUES ($5, $6, $7, $8, $9, ${quiz_id})
     RETURNING*;
     `
   return pool.query(queryString , Object.values(quiz))
