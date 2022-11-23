@@ -48,11 +48,9 @@ const addQuiz = function(title, description) {
   let queryString = `INSERT INTO quizzes (title, description)
   VALUES ( $1, $2) RETURNING * ;`;
 
-  // console.log('qstring:', queryString, 'qparams:', queryParams);
 
   return db.query(queryString, [title, description])
     .then(res => {
-      //creatQuestion(quiz_id);
       return res.rows[0];
     });
 };
@@ -66,24 +64,36 @@ const addQuestion = function(id, question, correctAnswer, incorrect1, incorrect2
   let queryString = `INSERT INTO questions (id, question_content, correct_answer, incorrect_1, incorrect_2, incorrect_3)
   VALUES ( $1, $2, $3, $4, $5, $6) RETURNING * ;`;
 
-
-  // console.log('qstring:', queryString, 'qparams:', queryParams);
-
   return db.query(queryString, [id, question, correctAnswer, incorrect1, incorrect2, incorrect3])
 
     .then(res => {
       return res.rows[0];
     });
-
 };
 
+const addUserInfo = function(id, creator, email) {
+
+  const queryParams = [];
+
+  let values = '';
+
+  let queryString = `INSERT INTO users (id, fullname, email)
+  VALUES ( $1, $2, $3) RETURNING * ;`;
+
+  return db.query(queryString, [id, creator, email])
+
+    .then(res => {
+      return res.rows[0];
+    });
+
+}
 
 
 
 
 
 
-module.exports = { getUsers, getAllQuizzes, getQuizFromId, addQuiz, addQuestion };
+module.exports = { getUsers, getAllQuizzes, getQuizFromId, addQuiz, addQuestion, addUserInfo };
 
 
 
