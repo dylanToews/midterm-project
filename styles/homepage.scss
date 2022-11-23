@@ -1,24 +1,20 @@
 ////////////////////////////////////**GLOBAL&DESKTOP**////////////////////////////////////
 
 #content-container {
-  flex-direction: row;
-  justify-content: center;
   padding-top: 130px;
   width: 90%;
-  height: 85%;
   margin: 0 auto;
-  overflow-y: scroll;
 }
 
-#content-container::-webkit-scrollbar {
+body::-webkit-scrollbar {
 background-color: transparent;
 }
 
-#content-container::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
 background-color: transparent;
 }
 
-#content-container::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
 background-color: rgb(237, 221, 238);
 opacity: 0.3;
 }
@@ -27,22 +23,22 @@ opacity: 0.3;
   display: inline-block;
   align-items: center;
   padding-right: 1rem;
-  overflow-x: hidden !important;
+  overflow: hidden !important;
   width: fit-content;
-  height: fit-content;
   block-size: fit-content;
   max-width: 150px;
   caption-side: bottom;
 }
 
-#description-cell {
-  max-width: 100%;
-
+.test {
+  width: 100%;
 }
 
-// .table {
-//   display: table;
-// }
+#description-cell {
+  max-width: 50ch;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 #header-row {
   width: 88%;
