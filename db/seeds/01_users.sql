@@ -4,9 +4,24 @@ INSERT INTO users (fullname, email, password) VALUES ('David', 'David@gmail.com'
 INSERT INTO users (fullname, email, password) VALUES ('Dylan', 'Dylan@gmail.com', 'password');
 
 -- quizzes table seeds --
-INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 1', 'quiz 1 description', false, 'www.example.com', 1);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 1', 'quiz 1 description TESTTESTT ESTTESTTESTTESTTESTTES TTESTTESTTESTTESTTESTTE STTESTTESTTESTTESTTE STTESTTESTTESTTES TTESTTESTTESTT ESTTESTTESTTESTTEST', false, 'www.example.com', 1);
 INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 2', 'quiz 2 description', false, 'www.example2.com', 2);
 INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+INSERT INTO quizzes (title, description, private, url, creator_id) VALUES ('quiz 3', 'quiz 3 description', true, 'www.example3.com', 3);
+
 
 -- -- user_quizzes table seeds --
 INSERT INTO user_quizzes (user_id, quiz_id) VALUES (1 ,1);
