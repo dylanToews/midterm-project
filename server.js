@@ -26,6 +26,12 @@ app.use(
   })
 );
 app.use(express.static('public'));
+app.use(session({
+	secret: 'secret',
+	resave: true,
+	saveUninitialized: true
+}));
+
 
 // Separated Routes for each Resource
 const userApiRoutes = require('./routes/users-api');
