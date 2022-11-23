@@ -1,64 +1,77 @@
-//TABLE LAYOUT AND STYLES///
+////////////////////////////////////**GLOBAL&DESKTOP**////////////////////////////////////
 
 #content-container {
   flex-direction: row;
   justify-content: center;
   padding-top: 130px;
   width: 90%;
-  height: 90%;
+  height: 85%;
   margin: 0 auto;
   overflow-y: scroll;
 }
 
 #content-container::-webkit-scrollbar {
-// background-color: red;
+background-color: transparent;
 }
 
 #content-container::-webkit-scrollbar-track {
-// background-color: blue;
+background-color: transparent;
 }
 
 #content-container::-webkit-scrollbar-thumb {
-// background-color: pink;
+background-color: rgb(237, 221, 238);
+opacity: 0.3;
 }
-
 
 .cell {
   display: inline-block;
   align-items: center;
+  padding-right: 1rem;
+  overflow-x: hidden !important;
+  width: fit-content;
+  height: fit-content;
+  block-size: fit-content;
+  max-width: 150px;
+  caption-side: bottom;
 }
 
+#description-cell {
+  max-width: 100%;
 
-.table {
-  display: table;
 }
 
+// .table {
+//   display: table;
+// }
 
 #header-row {
+  width: 88%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 2rem;
   padding: 1rem;
-  border: 2px solid black;
-  font-size: x-large;
+  font-size: 30px;
   font-weight: 400;
   border-style: outset;
-  border-width: 7px;
+  border-width: 5px;
   border-color: rgb(235, 204, 238);
 }
 
 
 .quiz-row {
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: 2rem;
-  font-size: x-large;
+  font-size: 30px;
+  color: black;
   border-style: outset;
-  border-width: 7px;
+  border-width: 5px;
   border-color: rgb(235, 204, 238);
+  text-decoration: none;
 }
 
 
@@ -66,6 +79,6 @@
   box-shadow: 0 0 20px rgb(253, 101, 220);
 }
 
-.link {
-  margin-right: 2.5rem;
-}
+
+////////////////////////////////////**TABLET**////////////////////////////////////
+
