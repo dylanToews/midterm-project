@@ -88,12 +88,34 @@ const addUserInfo = function(id, creator, email) {
 
 }
 
+const checkEmailAndPassword = function(email, password) {
+  if (email && password) {
+    // Execute SQL query that'll select the account from the database based on the specified email and password
+    db.query('SELECT * FROM users WHERE email = ? AND password = ?', [email, password], function(error, results, fields) {
+      // If there is an issue with the query, output the error
+      if (error) throw error;
+      // If the account exists
+      if (results.length > 0) {
+        // Authenticate the user
+        req.session.loggedin = true;
+        req.session.email = email;
+        // Redirect to home page
+        res.redirect('/');
+      } else {
+        res.send('Incorrect email and/or Password!');
+      }
+      res.end();
+    });
+  } else {
+    res.send('Please enter email and Password!');
+    res.end();
+  }
+};
 
 
 
 
-
-module.exports = { getUsers, getAllQuizzes, getQuizFromId, addQuiz, addQuestion, addUserInfo };
+module.exports = { getUsers, getAllQuizzes, getQuizFromId, addQuiz, addQuestion, addUserInfo, checkEmailAndPassword };
 
 
 
