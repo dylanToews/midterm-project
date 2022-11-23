@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/homepage.css" type="text/css" />
 
+   <!--Client Facing JS-->
+   <script type="text/javascript" src="/scripts/app.js"></script>
+
 </head>
 
 <body>
@@ -28,7 +31,7 @@
 
     <!--Page specific Content-->
     <main id="content-container">
-      <h1>Test your Simpsons Knowledge!</h1>
+      <h1>Test your Simpsons Knowledge! Click quiz to begin!</h1>
 
       <div class="table">
         <div class="quiz-row" id="header-row">
@@ -42,7 +45,7 @@
 
 
         <% for (let key in quizzes) { %>
-          <a href="/" class="quiz-row">
+          <a href="/quiz/<%= quizzes[key].id %>" class="quiz-row">
             <span>
               <div class="cell">
                 <%= quizzes[key].title %>
@@ -56,7 +59,7 @@
             </span>
             <div class="cell">
               <span href="/quiz/<%= quizzes[key].id %>">
-                <button class="btn btn-primary"></button>
+                <button class="btn btn-primary" href="/quiz/<%= quizzes[key].id %>"></button>
               </span>
             </div>
           </a>
@@ -70,4 +73,12 @@
   <img id="footer-pic" src="https://i.imgur.com/I6i6QM1.png" alt="footer logo">
 </footer>
 
+
+
+
+
 </html>
+
+
+
+
