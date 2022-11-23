@@ -15,7 +15,8 @@ const getUsers = () => {
 const getAllQuizzes = () => {
   return db.query(`SELECT *
   FROM quizzes
-  LEFT JOIN users ON quizzes.id = users.id`)
+  LEFT JOIN users ON quizzes.id = users.id
+  WHERE private = FALSE`)
     .then(data => {
       return data.rows;
     });

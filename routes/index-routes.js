@@ -31,8 +31,6 @@ router.get('/', (req, res) => {
       console.log('index template vars', templateVars)
       res.render('index', templateVars);
       //res.json({ result })
-
-
     })
     .catch(err => {
       res

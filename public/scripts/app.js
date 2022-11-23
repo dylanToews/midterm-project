@@ -1,7 +1,6 @@
 // Client facing scripts here
 
 const validate = function(answer, correctAnswer, form) {
-
   const formname = document.getElementById(form);
 
   if (answer == correctAnswer) {
@@ -13,3 +12,16 @@ const validate = function(answer, correctAnswer, form) {
 };
 
 
+
+
+const copyContent = () => {
+  let text = document.getElementById('myText').innerHTML;
+
+  navigator.clipboard.writeText(text).then(() => {
+    console.log('Content copied to clipboard', text);
+    /* Resolved - text copied to clipboard successfully */
+  },() => {
+    console.error('Failed to copy');
+    /* Rejected - text failed to copy to the clipboard */
+  });
+}
