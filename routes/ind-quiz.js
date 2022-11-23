@@ -55,7 +55,7 @@ router.get('/quiz/:id', (req, res) => {
         .status(500)
         .json({ error: err.message });
     });
-});
+}); 
 
 
 
