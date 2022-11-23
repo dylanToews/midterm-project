@@ -1,5 +1,29 @@
 ////////////////////////////////////////////**GLOBAL&DESKTOP//////////////////////////////////////
-.quiz-create-form {
-  height: 80%;
-  bottom: 0;
+.row-form {
+  padding-bottom: 3rem;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.row-form input {
+  width: 90%;
+  font-size: 25px;
+  font-family: 'Homer Simpson Revised', sans-serif;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-style: groove;
+
+
+}
+
+label {
+  width: 15%;
+}
+
+button {
+  font-family: 'Homer Simpson Revised', sans-serif;
+  font: 20px;
 }
