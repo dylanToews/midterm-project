@@ -10,7 +10,7 @@ const validate = function(answer, correctAnswer, form) {
   }
   else {
     console.log('anything2');
-    formname.innerHTML = "<div style='background-color:pink'><h1>DOH! You were wrong! The answer was: " + correctAnswer + "</h1></div>";
+    formname.innerHTML = "<div style='background-color:pink'><h1>DOH! You were wrong! The answer was: " + correctAnswer,  + "</h1></div>";
   }
 };
 

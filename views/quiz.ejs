@@ -9,21 +9,20 @@
   <title>Simps Quiz Time</title>
 
   <!--App CSS-->
-  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/_nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
 
   <!--Bootstrap CSS-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    
+
  <!--Client Facing JS-->
     <script type="text/javascript" src="/scripts/app.js"></script>
 
 </head>
 
 <body>
-  <%- include('partials/_header') %>
+  <%- include('partials/_navbar') %>
     <header>
       <section class="quiz-info">
         <h1><%=quiz.title%></h1>
@@ -45,10 +44,10 @@
             <h1><%= quiz.question_content%><span id='a1'></span> </h1><br>
 
             <form id="d1">
-            <input type="radio" name="choice" value="correct-answer">correct-answer
-            <input type="radio" name="choice" value="wrong-answer1">B) <%= quiz.incorrect_1%>
-            <input type="radio" name="choice" value="wrong-answer2">C) <%= quiz.incorrect_2%>
-            <input type="radio" name="choice" value="wrong-answer3">D) <%= quiz.incorrect_3%>
+            <input type="radio" name="choice" value="correct-answer"> <%= quiz.option0 %>
+            <input type="radio" name="choice" value="wrong-answer1">B) <%= quiz.option1 %>
+            <input type="radio" name="choice" value="wrong-answer2">C) <%= quiz.option2 %>
+            <input type="radio" name="choice" value="wrong-answer3">D) <%= quiz.option3 %>
             <br>
             <input type="submit" value="submit" onclick="validate(choice.value, 'correct-answer', 'd1')">
             </form>
@@ -57,28 +56,12 @@
       </article>
     </main>
 
-
-
-
-  <!-- <div>
-  <h1>Python is a <span id='a2'>______</span> Language.</h1><br>
-  <form id="d2">
-  <input type="radio" name="choice" value="Scripting"> Scripting
-  <input type="radio" name="choice" value="Wonderful"> Wonderful
-  <input type="radio" name="choice" value="Application"> Application
-  <input type="radio" name="choice" value="None of These"> None of These
-  <br>
-  <input type="submit" value="submit" onclick="validate(choice.value, 'Wonderful', 'd2', 'a2')">
-  </form>
-  </div> -->
-
-
     <footer>
-      <section>
+      <!-- <section>
         <p class="progress-fill">
           Progress: <span class="progress-count">1 / 10</span>
         </p>
-      </section>
+      </section> -->
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
