@@ -9,7 +9,7 @@
   <title>Simps Quiz Time</title>
 
   <!--App CSS-->
-  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/_nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
   <!--Bootstrap CSS-->
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-  <%- include('partials/_header') %>
+  <%- include('partials/_navbar') %>
     <header>
       <section class="quiz-info">
         <h1><%=quiz.title%></h1>
@@ -56,24 +56,14 @@
       </article>
     </main>
 
-  <!-- <div>
-  <h1>Python is a <span id='a2'>______</span> Language.</h1><br>
-  <form id="d2">
-  <input type="radio" name="choice" value="Scripting"> Scripting
-  <input type="radio" name="choice" value="Wonderful"> Wonderful
-  <input type="radio" name="choice" value="Application"> Application
-  <input type="radio" name="choice" value="None of These"> None of These
-  <br>
-  <input type="submit" value="submit" onclick="validate(choice.value, 'Wonderful', 'd2', 'a2')">
-  </form>
-  </div> -->
+
 
     <footer>
-      <section>
+      <!-- <section>
         <p class="progress-fill">
           Progress: <span class="progress-count">1 / 10</span>
         </p>
-      </section>
+      </section> -->
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
