@@ -3,7 +3,7 @@ const router = express.Router();
 const quizQueries = require('../db/queries/queries');
 
 
-// create some function to shuffle the answer's position 
+// create some function to shuffle the answer's position
 // we always have 4 choices :
 function shuffle() {
   const array = [0, 1, 2, 3];

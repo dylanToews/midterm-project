@@ -8,7 +8,7 @@ const creatQuiz = () => {
     private,
     ctreator_id
     )
-    VALUES ($1, $2, $3, $4) 
+    VALUES ($1, $2, $3, $4)
     RETURNING*;
     `
     return pool.query(queryString , Object.values(quiz))
@@ -20,7 +20,7 @@ const creatQuiz = () => {
  /*** We should know the generated id to insert into question tables ***/
   const creatQuestion = () => {
   const queryString = `
-  INSERT INTO questions( 
+  INSERT INTO questions(
     question_content,
     correct_answer,
     wrong_answer1,
@@ -30,7 +30,7 @@ const creatQuiz = () => {
     )
     VALUES ($5, $6, $7, $8, $9, ${quiz_id})
     RETURNING*;
-    ` 
+    `
   return pool.query(queryString , Object.values(quiz))
     .then(data => {
       return data.rows;
