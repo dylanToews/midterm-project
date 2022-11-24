@@ -15,7 +15,8 @@ const getUsers = () => {
 const getAllQuizzes = () => {
   return db.query(`SELECT *
   FROM quizzes
-  LEFT JOIN users ON quizzes.id = users.id`)
+  LEFT JOIN users ON quizzes.id = users.id
+  WHERE private = FALSE`)
     .then(data => {
       return data.rows;
     });
@@ -41,14 +42,14 @@ const getQuizFromId = function(id) {
 
 
 
-const addQuiz = function(title, description) {
+const addQuiz = function(title, description, private) {
   const queryParams = [];
   let values = '';
 
-  let queryString = `INSERT INTO quizzes (title, description)
-  VALUES ( $1, $2) RETURNING * ;`;
+  let queryString = `INSERT INTO quizzes (title, description, private)
+  VALUES ( $1, $2, $3) RETURNING * ;`;
 
-  return db.query(queryString, [title, description])
+  return db.query(queryString, [title, description, private])
     .then(res => {
       return res.rows[0];
     });
@@ -81,6 +82,24 @@ const addUserInfo = function(id, creator, email) {
 
 };
 
+const addPrivateBoolean = function(id, private) {
+  const queryParams = [];
+  let values = '';
+
+  console.log("inside addPrivate", private)
+  let queryString = `INSERT INTO quizzes (private)
+  VALUES ( $1, $2 ) RETURNING * ;`;
+
+  return db.query(queryString, [id, private])
+    .then(res => {
+      console.log(res.rows[0])
+      return res.rows[0];
+    });
+
+
+
+}
+
 const checkEmailAndPassword = function(email, password) {
   const queryParams = [];
   let values = '';
@@ -99,7 +118,7 @@ const checkEmailAndPassword = function(email, password) {
 
 
 
-module.exports = { getUsers, getAllQuizzes, getQuizFromId, addQuiz, addQuestion, addUserInfo, checkEmailAndPassword };
+module.exports = { getUsers, getAllQuizzes, getQuizFromId, addQuiz, addQuestion, addUserInfo, checkEmailAndPassword, addPrivateBoolean };
 
 
 
