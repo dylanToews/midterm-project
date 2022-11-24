@@ -8,7 +8,6 @@ const validate = function(answer, correctAnswer, form) {
     formname.innerHTML = "<div style='background-color:lightgreen'><h1>CORRECT!! The answer was: " + correctAnswer + "</h1></div>";
   }
   else {
-    console.log('anything2');
     formname.innerHTML = "<div style='background-color:pink'><h1>DOH! You were wrong! The answer was: " + correctAnswer + "</h1></div>";
   }
 };
