@@ -3,6 +3,15 @@
 The Simps Quiz! A fun way to test your Simpsons knowledege and share your Simpsons trivia with others.
 
 ## Final Product
+!["Screenshots of Homepage"](https://github.com/dylanToews/midterm-project/blob/master/docs/Simps-quiz-homepage.png?raw=true)
+
+!["Screenshots of Create a Quiz"](https://github.com/dylanToews/midterm-project/blob/master/docs/Simps-quiz-create-quiz.png?raw=true)
+
+!["Screenshots of Writing a Quiz"](https://github.com/dylanToews/midterm-project/blob/master/docs/Simps-quiz-writing-quiz.png?raw=true)
+
+!["Screenshots of Incorrect Answer"](https://github.com/dylanToews/midterm-project/blob/master/docs/Simps-quiz-incorrect.png?raw=true)
+
+!["Screenshots of Correct Answer"](https://github.com/dylanToews/midterm-project/blob/master/docs/Simps-quiz-correct.png?raw=true)
 
 
 ## Description
