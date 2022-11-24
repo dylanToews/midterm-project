@@ -17,7 +17,7 @@
 
   <!--App CSS-->
   <link rel="stylesheet" href="/styles/_nav.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/correct.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/incorrect.css" type="text/css" />
 
   <!--Client Facing JS-->
   <script type="text/javascript" src="/scripts/helpers.js"></script>
@@ -31,20 +31,22 @@
     <main id="content-container">
 
 
-      <div><p>Congratulations!! You were correct.</p> <p>You are a Simpsons Expert!</p>Have a Duff on the house!<p> </p></div>
-
-      <div id="share-button">
-        <p>Share your success!</p> <p>Brag to all your friends!</p>
-        <button class="btn" onclick="copyContent(`localhost:8080/quiz/correct`)"><i
-            class="fa-solid fa-copy"></i></button>
+      <div>
+        <p id="doh">DOH!</p>
+        <p>We wont talk about this attempt.</p>We were never here....<p> </p>
       </div>
 
-      <form class="form-inline" action="/correct" method="POST"></form>
-      </form>
+      <!-- <form class="form-inline" action="/answers" method="POST"></form>
+      </form> -->
 
+      <div id="share-button">
+        <p>Share your miserably failure!</p> <p>If you want...</p>
+        <button class="btn" onclick="copyContent(`localhost:8080/quiz/answers`)"><i
+            class="fa-solid fa-copy"></i></button>
+      </div>
     </main>
     <footer>
-      <img src="https://i.imgur.com/RCSsDuN.png" alt="Duff">
+      <img src="https://i.imgur.com/5wJhoPZ.png" alt="Duff">
     </footer>
 </body>
 

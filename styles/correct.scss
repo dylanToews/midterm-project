@@ -2,15 +2,16 @@
 
 html,
 body {
-  background: linear-gradient(0deg, rgba(19, 246, 255, 1) 24%, rgba(254, 212, 32, 0.9727891156462585) 88%);
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
+  background: linear-gradient(175deg, rgba(254,212,32,1) 34%, rgba(11,115,174,1) 51%);  border: 0px;
   min-height: 100%;
   font-family: 'Homer Simpson Revised', sans-serif;
+  margin: 0;
 }
 
 #content-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
   padding-top: 130px;
   width: 90%;
   margin: 0 auto;
@@ -32,7 +33,6 @@ button:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 
 footer {
   display: flex;
