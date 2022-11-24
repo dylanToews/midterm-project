@@ -48,6 +48,8 @@ router.get('/quiz/:id', (req, res) => {
       const templateVars = {
         quiz: shuffleQuestions(result)
       };
+      console.log(result);
+      console.log(templateVars.quiz);
       res.render('quiz', templateVars);
     })
     .catch(err => {

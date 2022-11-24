@@ -42,6 +42,7 @@ const createRoutes = require('./routes/create-quiz');
 const answerRoutes = require('./routes/answers');
 const indexRoutes = require('./routes/index-routes');
 const loginRoutes = require('./routes/login-routes');
+const correctAnswer = require('./routes/correct');
 
 
 
@@ -65,6 +66,7 @@ app.use('/', createRoutes);
 app.use('/', answerRoutes);
 app.use('/', indexRoutes);
 app.use('/', loginRoutes);
+app.use('/', correctAnswer);
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
