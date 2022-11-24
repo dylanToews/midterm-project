@@ -12,7 +12,7 @@ router.get('/create', (req, res) => {
 router.post('/create', (req, res) => {
   const {title, description, creator, email, question, answer, incorrect1, incorrect2, incorrect3} = req.body
 
-  const private = Boolean(req.body.private)
+  const private = !Boolean(req.body.private)
 
   console.log("inside route", private)
 
