@@ -20,7 +20,7 @@ router.post('/create', (req, res) => {
   .then (data => {
     console.log('inserted quiz record', data)
     const id = data.id
-    // console.lo
+    // console.log
     return quizQueries.addQuestion(id, question, answer, incorrect1, incorrect2, incorrect3)
   })
   .then (data => {

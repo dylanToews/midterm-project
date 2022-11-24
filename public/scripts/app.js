@@ -18,20 +18,22 @@ const copyContent = (input) => {
 const validate = function(answer, correctAnswer, form) {
   const formname = document.getElementById(form);
 
-  console.log('validate')
-  if (answer == correctAnswer) {
-    // router.post('/quiz/:id', (req, res) => {
-    //   res.redirect('/')
-    // })
-      window.location.replace("localhost:8080/correct");
 
-    // formname.innerHTML = "<div><h1>CORRECT!! Have a Duff on the house!</h1></div>";
+  console.log('correctAnswer',correctAnswer)
+  console.log('answer',answer)
+  console.log('form',form)
+
+  if (answer == correctAnswer) {
+
+
+    formname.innerHTML =`<button class="btn" onclick="copyContent('localhost:8080/correct')"><i class="fa-solid fa-copy"></i>Click to copy link and share with your pals, buddy</button>`
+
+    console.log('validate')
   }
   else {
-    formname.innerHTML = "<div<h1>DOH! You were wrong!</h1></div>";
+    formname.innerHTML = `<button class="btn" ><i class="fa-solid fa-copy"></i>DOH! Wrong. Click to try again</button>`;
   }
 };
-
 
 
 

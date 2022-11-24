@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="/styles/homepage.css" type="text/css" />
 
   <!--Client Facing JS-->
-  <script type="text/javascript" src="/scripts/app.js"></script>
+  <script type="text/javascript" src="/scripts/helpers.js"></script>
 
 </head>
 
@@ -62,7 +62,7 @@
               </span>
             </div>
           </a>
-          <button class="btn" onclick="copyContent('localhost:8080/quiz/<%= quizzes[key].id %>')"><i class="fa-solid fa-copy"></i></button>
+          <button class="btn" onclick="copyContent(`localhost:8080/quiz/<%= quizzes[key].id %>`)"><i class="fa-solid fa-copy"></i></button>
           <% } %>
       </div>
     </main>
