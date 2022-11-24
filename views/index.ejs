@@ -3,17 +3,17 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
   <title>The Simps Quiz</title>
 
   <!--External CSS-->
   <link href="https://fonts.cdnfonts.com/css/homer-simpson-revised" rel="stylesheet">
 
 
-  <!--EXTERNAL JS-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <!--EXTERNAL JS-->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+ integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!--App CSS-->
   <link rel="stylesheet" href="/styles/_nav.css" type="text/css" />
@@ -31,17 +31,7 @@
 
     <!--Page specific Content-->
     <main id="content-container">
-      <h1>Test your Simpsons Knowledge! Click quiz to try your luck!</h1>
-
-      <div class="table">
-        <div class="quiz-row" id="header-row">
-          <span>
-            <div class="cell">TITLE</div>
-            <div class="cell">CREATOR</div>
-            <div class="cell" id="description-cell">DESCRIPTION</div>
-          </span>
-        </div>
-        <span class="cell link">COPY URL</span>
+      <h1>Wohoo! You got it right!</h1>
 
 
         <% for (let key in quizzes) { %>
@@ -72,7 +62,5 @@
 
 </body>
 
-
-<!--  -->
 
 </html>

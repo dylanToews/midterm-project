@@ -56,5 +56,38 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0 0 20px rgb(253, 101, 220);
 }
 
+#header-row:hover {
+  box-shadow: none;
+}
+
 
 ////////////////////////////////////**TABLET**////////////////////////////////////
+
+@media only screen and (min-width: 480px) and (max-width: 820px) {
+
+  #description-cell {
+    max-width: 20ch !important;
+  }
+}
+
+
+
+////////////////////////////////////**MOBILE**////////////////////////////////////
+
+@media only screen and (max-width: 480px) {
+  #description-cell {
+    max-width: 23ch;
+  }
+
+#header-row {
+  font-size: 20px;
+}
+
+  .quiz-row {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
