@@ -18,7 +18,10 @@
   <!--App CSS-->
   <link rel="stylesheet" href="/styles/_nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/good-result.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/homepage.css" type="text/css" />
+
+  <!--Client Facing JS-->
+  <script type="text/javascript" src="/scripts/helpers.js"></script>
 
 </head>
 
@@ -30,8 +33,27 @@
     <main id="content-container">
       <h1>Wohoo! You got it right!</h1>
 
-      <div class="results">
-         <p>Brag to your friends!! Share the results!</p> <button class="btn btn-primary"><i class="fa-solid fa-copy"></i></button>
+
+        <% for (let key in quizzes) { %>
+          <a href="/quiz/<%= quizzes[key].id %>" class="quiz-row">
+            <span class="test">
+              <div class="cell">
+                <%= quizzes[key].title %>
+              </div>
+              <div class="cell">
+                <%= quizzes[key].fullname %>
+              </div>
+              <div class="cell" id="description-cell">
+                <%= quizzes[key].description %>
+              </div>
+            </span>
+            <div class="cell">
+              <span href="/quiz/<%= quizzes[key].id %>">
+              </span>
+            </div>
+          </a>
+          <button class="btn" onclick="copyContent(`localhost:8080/quiz/<%= quizzes[key].id %>`)"><i class="fa-solid fa-copy"></i></button>
+          <% } %>
       </div>
     </main>
     <footer>

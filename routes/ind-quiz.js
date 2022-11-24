@@ -40,6 +40,9 @@ const shuffleQuestions = qObj => {
 }
 
 
+
+
+
 router.get('/quiz/:id', (req, res) => {
   const id = req.params.id;
   quizQueries.getQuizFromId(id)
@@ -58,6 +61,12 @@ router.get('/quiz/:id', (req, res) => {
         .json({ error: err.message });
     });
 });
+
+// router.post('/quiz/:id', (req, res) => {
+
+
+
+// }
 
 
 
