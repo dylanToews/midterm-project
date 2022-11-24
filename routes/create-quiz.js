@@ -15,8 +15,8 @@ router.post('/create', (req, res) => {
   const private = Boolean(req.body.private)
 
   console.log("inside route", private)
-  console.log("title test", title)
-  quizQueries.addQuiz(title, description)
+
+  quizQueries.addQuiz(title, description, private)
   .then (data => {
     console.log('inserted quiz record', data)
     const id = data.id
@@ -27,16 +27,17 @@ router.post('/create', (req, res) => {
     const id = data.id
     return quizQueries.addUserInfo(id, creator, email)
   })
-  .then (data => {
-    const id = data.id
-    return quizQueries.addPrivateBoolean(id, private)
-  })
+  // .then (data => {
+  //   const id = data.id
+  //   return quizQueries.addPrivateBoolean(id, private)
+  // })
 
   .then (data => {
 //set cookie to questions id
 
     res.redirect('/')
   })
+  //.catch (res.redirect("/create"))
 
 })
 

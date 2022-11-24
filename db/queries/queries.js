@@ -42,14 +42,14 @@ const getQuizFromId = function(id) {
 
 
 
-const addQuiz = function(title, description) {
+const addQuiz = function(title, description, private) {
   const queryParams = [];
   let values = '';
 
-  let queryString = `INSERT INTO quizzes (title, description)
-  VALUES ( $1, $2) RETURNING * ;`;
+  let queryString = `INSERT INTO quizzes (title, description, private)
+  VALUES ( $1, $2, $3) RETURNING * ;`;
 
-  return db.query(queryString, [title, description])
+  return db.query(queryString, [title, description, private])
     .then(res => {
       return res.rows[0];
     });

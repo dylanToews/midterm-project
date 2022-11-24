@@ -3,7 +3,7 @@
 DROP TABLE IF EXISTS questions CASCADE;
 CREATE TABLE questions (
   id SERIAL PRIMARY KEY NOT NULL,
-  question_content VARCHAR(255) NOT NULL,
+  question_content VARCHAR(255),
   correct_answer VARCHAR(255),
   wrong_answer1 VARCHAR(255),
   wrong_answer2 VARCHAR(255),
