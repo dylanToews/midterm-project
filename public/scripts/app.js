@@ -14,14 +14,16 @@ const validate = function(answer, correctAnswer, form) {
 
 
 
-const copyContent = () => {
-  let text = document.getElementById('myText').innerHTML;
+const copyContent = (input) => {
 
-  navigator.clipboard.writeText(text).then(() => {
-    console.log('Content copied to clipboard', text);
+  console.log("tesetINput", input)
+  navigator.clipboard.writeText(input).then(() => {
+    //formname.innerHTML = "<div class = cell>Link copied to clipboard</div>"
     /* Resolved - text copied to clipboard successfully */
   },() => {
     console.error('Failed to copy');
     /* Rejected - text failed to copy to the clipboard */
   });
 }
+
+
