@@ -39,10 +39,10 @@ const widgetApiRoutes = require('./routes/widgets-api');
 const usersRoutes = require('./routes/users');
 const quizzesRoutes = require('./routes/ind-quiz');
 const createRoutes = require('./routes/create-quiz');
-const answerRoutes = require('./routes/answers');
 const indexRoutes = require('./routes/index-routes');
 const loginRoutes = require('./routes/login-routes');
 const correctAnswer = require('./routes/correct');
+const incorrectAnswer = require('./routes/incorrect');
 
 
 
@@ -63,10 +63,10 @@ app.use('/users', usersRoutes);
 
 app.use('/', quizzesRoutes);
 app.use('/', createRoutes);
-app.use('/', answerRoutes);
 app.use('/', indexRoutes);
 app.use('/', loginRoutes);
 app.use('/', correctAnswer);
+app.use('/', incorrectAnswer);
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);

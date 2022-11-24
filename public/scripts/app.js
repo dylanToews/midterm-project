@@ -26,12 +26,12 @@ const validate = function(answer, correctAnswer, form) {
   if (answer == correctAnswer) {
 
 
-    formname.innerHTML =`<button class="btn" onclick="copyContent('localhost:8080/correct')"><i class="fa-solid fa-copy"></i>Click to copy link and share with your pals, buddy</button>`
+    formname.innerHTML =`<button class="btn" id = "correct-message" onclick="copyContent('localhost:8080/correct')"><i class="fa-solid fa-copy"></i>Wohoo! You're smart! Click to copy link and share results</button>`
 
     console.log('validate')
   }
   else {
-    formname.innerHTML = `<button class="btn" ><i class="fa-solid fa-copy"></i>DOH! Wrong. Click to try again</button>`;
+    formname.innerHTML = `<button class="btn" id = "incorrect-message" onclick="copyContent('localhost:8080/incorrect')"><i class="fa-solid fa-copy"></i>DOH! Wrong. Click to copy link and share results</button>`;
   }
 };
 
