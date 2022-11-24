@@ -34,6 +34,24 @@
 
 // ////////////////////////////////////**MOBILE**////////////////////////////////////
 
-// @media only screen (max-width: 480px) {
+@media only screen (max-width: 480px) {
+  #quiz-title {
+    font-size: 35px;
+  }
 
-// }
+  #creator-name {
+    font-size: 25px;
+  }
+
+  #quiz-descrip {
+    font-size: 20px;
+  }
+
+  #question-title {
+    font-size: 35px;
+  }
+
+  #question-form {
+    font-size: 30px;
+  }
+}

@@ -43,6 +43,10 @@ button {
 ////////////////////////////////////**MOBILE**////////////////////////////////////
 
 @media only screen and (max-width: 480px) {
+h1 {
+  font-size: 25px;
+}
+
   .row-form {
     display: flex;
     justify-content: space-between;
