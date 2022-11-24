@@ -44,12 +44,12 @@
             <h1><%= quiz.question_content%><span id='a1'></span> </h1><br>
 
             <form id="d1">
-            <input type="radio" name="choice" value="correct-answer"> <%= quiz.option0 %>
-            <input type="radio" name="choice" value="wrong-answer1">B) <%= quiz.option1 %>
-            <input type="radio" name="choice" value="wrong-answer2">C) <%= quiz.option2 %>
-            <input type="radio" name="choice" value="wrong-answer3">D) <%= quiz.option3 %>
+            <input type="radio" name="choice" value="<% if(quiz.correct_answer === quiz.option0){%>correct_answer<% } else{ %>wrong_answer0<% } %>" > A) <%= quiz.option0 %>
+            <input type="radio" name="choice" value="<% if(quiz.correct_answer === quiz.option1){%>correct_answer<% } else{ %>wrong_answer1<% } %>" > B) <%= quiz.option1 %>
+            <input type="radio" name="choice" value="<% if(quiz.correct_answer === quiz.option2){%>correct_answer<% } else{ %>wrong_answer2<% } %>" > C) <%= quiz.option2 %>
+            <input type="radio" name="choice" value="<% if(quiz.correct_answer === quiz.option3){%>correct_answer<% } else{ %>wrong_answer3<% } %>" > D) <%= quiz.option3 %>
             <br>
-            <input type="submit" value="submit" onclick="validate(choice.value, 'correct-answer', 'd1')">
+            <input value= 'submit' type="submit" onclick="validate(choice.value, 'correct_answer','d1')">
             </form>
             </div>
 
@@ -57,15 +57,9 @@
     </main>
 
     <footer>
-      <!-- <section>
-        <p class="progress-fill">
-          Progress: <span class="progress-count">1 / 10</span>
-        </p>
-      </section> -->
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="midterm-project/public/scripts/app.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,6 @@
 
 const validate = function(answer, correctAnswer, form) {
 
-  console.log('anything');
   const formname = document.getElementById(form);
 
   if (answer == correctAnswer) {
