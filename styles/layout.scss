@@ -19,10 +19,11 @@ body {
 button {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   background-color: rgb(254,212,32);
-  width: 45px;
+  width: auto;
   font-size: 20px;
   border-radius: 12px;
   cursor: pointer;
+  font-family: 'Homer Simpson Revised', sans-serif;
 }
 
 button:hover {background-color: #c5d467}
