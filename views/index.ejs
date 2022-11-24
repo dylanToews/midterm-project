@@ -31,7 +31,18 @@
 
     <!--Page specific Content-->
     <main id="content-container">
-      <h1>Wohoo! You got it right!</h1>
+      <h1>Test your Simpsons Knowledge! Click quiz to try your luck!</h1>
+
+      <div class="table">
+        <div class="quiz-row" id="header-row">
+          <span>
+            <div class="cell">TITLE</div>
+            <div class="cell">CREATOR</div>
+            <div class="cell" id="description-header-cell">DESCRIPTION</div>
+          </span>
+        </div>
+        <span class="cell link">COPY URL</span>
+
 
 
         <% for (let key in quizzes) { %>
