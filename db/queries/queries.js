@@ -98,7 +98,7 @@ const addPrivateBoolean = function(id, private) {
 };
 
 
-// Function for login page. Not in production currently
+// Function for login page
 
 const checkEmailAndPassword = function(email, password) {
   const queryParams = [];

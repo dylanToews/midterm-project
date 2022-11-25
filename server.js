@@ -34,9 +34,9 @@ app.use(session({
 
 
 // Separated Routes for each Resource
-const userApiRoutes = require('./routes/users-api');
-const widgetApiRoutes = require('./routes/widgets-api');
-const usersRoutes = require('./routes/users');
+// const userApiRoutes = require('./routes/users-api');
+// const widgetApiRoutes = require('./routes/widgets-api');
+// const usersRoutes = require('./routes/users');
 const quizzesRoutes = require('./routes/quiz-routes');
 const createRoutes = require('./routes/create-routes');
 const indexRoutes = require('./routes/index-routes');
@@ -50,9 +50,9 @@ const incorrectAnswer = require('./routes/incorrect-routes');
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 
 
-app.use('/api/users', userApiRoutes);
-app.use('/api/widgets', widgetApiRoutes);
-app.use('/users', usersRoutes);
+// app.use('/api/users', userApiRoutes);
+// app.use('/api/widgets', widgetApiRoutes);
+// app.use('/users', usersRoutes);
 
 //test api for rendering all content on index page
 

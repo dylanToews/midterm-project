@@ -10,11 +10,12 @@ router.get('/create', (req, res) => {
 });
 
 //Post new quiz content and add to database
+
 router.post('/create', (req, res) => {
   const { title, description, creator, email, question, answer, incorrect1, incorrect2, incorrect3 } = req.body;
   const private = !Boolean(req.body.private);
-  quizQueries.addQuiz(title, description, private)
 
+  quizQueries.addQuiz(title, description, private)
     .then(data => {
       const id = data.id;
       return quizQueries.addQuestion(id, question, answer, incorrect1, incorrect2, incorrect3);
@@ -27,10 +28,6 @@ router.post('/create', (req, res) => {
       res.redirect('/');
     });
 });
-
-
-
-
 
 
 
