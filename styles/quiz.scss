@@ -24,33 +24,6 @@
   font-size: 25px;
 }
 
-#create-quiz-button {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  background-color: rgb(254,212,32);
-  width: auto;
-  font-size: 20px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-family: 'Homer Simpson Revised', sans-serif;
-}
-
-#create-quiz-button:hover {background-color: #c5d467}
-
-#create-quiz-button:active {
-  background-color: #32e46a;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-
-
-////////////////////////////////////**TABLET**////////////////////////////////////
-
-// @media only screen and (min-width: 480px) and (max-width: 820px) {
-
-// }
-
-
 
 // ////////////////////////////////////**MOBILE**////////////////////////////////////
 

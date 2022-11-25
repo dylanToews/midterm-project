@@ -5,6 +5,7 @@ h5 {
   margin-bottom: 2rem;
 }
 
+
 html,
 body {
   background: rgb(254,212,32);
@@ -16,18 +17,6 @@ body {
   font-family: 'Homer Simpson Revised', sans-serif;
 }
 
-#content-container {
-  padding-top: 130px;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.row-form {
-  padding-bottom: 3rem;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-}
 
 input {
   width: 50%;
@@ -41,12 +30,6 @@ input {
 }
 
 
-
-.login-label {
-  width: 45px;
-
-}
-
 #login-button {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgb(254, 212, 32);
@@ -57,15 +40,18 @@ input {
   margin-top: 2rem;
 }
 
+
 #login-button:hover {
   background-color: #c5d467
 }
+
 
 #login-button:active {
   background-color: #32e46a;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
 
 #family-photo {
   margin-top: 20rem;

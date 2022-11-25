@@ -1,4 +1,9 @@
 ////////////////////////////////////////////**GLOBAL&DESKTOP//////////////////////////////////////
+h1 {
+  margin-bottom: 2rem;
+}
+
+
 .row-form {
   padding-bottom: 3rem;
   font-size: 30px;
@@ -6,8 +11,9 @@
   align-items: center;
 }
 
+
 .row-form input {
-  width: 90%;
+  width: 80%;
   font-size: 25px;
   font-family: 'Homer Simpson Revised', sans-serif;
   background-color: transparent;
@@ -15,22 +21,24 @@
   border-left: none;
   border-right: none;
   border-bottom-style: groove;
-
-
 }
+
 
 label {
   width: 15%;
 }
+
 
 button {
   font-family: 'Homer Simpson Revised', sans-serif;
   font: 20px;
 }
 
+
 #public-private-label {
   font-size: 25px;
 }
+
 
 ////////////////////////////////////**TABLET**////////////////////////////////////
 
@@ -43,7 +51,6 @@ button {
 }
 
 
-
 ////////////////////////////////////**MOBILE**////////////////////////////////////
 
 @media only screen and (max-width: 480px) {
@@ -51,16 +58,19 @@ button {
     font-size: 25px;
   }
 
+
   .row-form {
     display: flex;
     justify-content: space-between;
     font-size: 15px;
   }
 
+
   .row-form input {
     width: 80%;
   }
 
+  
   #public-private-label {
     font-size: 20px;
   }

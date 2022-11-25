@@ -1,3 +1,5 @@
+//////////////////////////////////////////////////////////**GLOBAL**/////////////////////////////////////////////////////////////////////////////////
+
 html,
 body {
   background: rgb(254,212,32);
@@ -6,6 +8,7 @@ background: linear-gradient(175deg, rgba(254,212,32,1) 24%, rgba(79,180,56,1) 50
   font-family: 'Homer Simpson Revised', sans-serif;
   margin: 0;
 }
+
 
 #content-container {
   display: flex;
@@ -16,10 +19,12 @@ background: linear-gradient(175deg, rgba(254,212,32,1) 24%, rgba(79,180,56,1) 50
   margin: 0 auto;
 }
 
+
 #doh {
   font-size: 50px;
   font-weight: bolder;
 }
+
 
 button {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -30,14 +35,15 @@ button {
   cursor: pointer;
 }
 
+
 button:hover {background-color: #c5d467}
+
 
 button:active {
   background-color: #32e46a;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 
 
 footer {
