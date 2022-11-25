@@ -1,14 +1,27 @@
 ////////////////////////////////////**GLOBAL**////////////////////////////////////
 
+body::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(228, 201, 230);
+  opacity: 0.3;
+}
+
+
 html,
 body {
   background: linear-gradient(0deg, rgba(19, 246, 255, 1) 24%, rgba(254, 212, 32, 0.9727891156462585) 88%);
   margin: 0px;
-  padding: 0px;
-  border: 0px;
   min-height: 100%;
   font-family: 'Homer Simpson Revised', sans-serif;
 }
+
 
 #content-container {
   padding-top: 130px;
@@ -16,9 +29,10 @@ body {
   margin: 0 auto;
 }
 
+
 button {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  background-color: rgb(254,212,32);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(254, 212, 32);
   width: auto;
   font-size: 20px;
   border-radius: 12px;
@@ -26,7 +40,11 @@ button {
   font-family: 'Homer Simpson Revised', sans-serif;
 }
 
-button:hover {background-color: #c5d467}
+
+button:hover {
+  background-color: #c5d467
+}
+
 
 button:active {
   background-color: #32e46a;

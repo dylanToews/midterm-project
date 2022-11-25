@@ -1,35 +1,6 @@
 ////////////////////////////////////**GLOBAL&DESKTOP**////////////////////////////////////
 
-body::-webkit-scrollbar {
-  background-color: transparent;
-}
-
-body::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: rgb(237, 221, 238);
-  opacity: 0.3;
-}
-
-.cell {
-  display: inline-block;
-  align-items: center;
-  padding-right: 1rem;
-  overflow: hidden !important;
-  caption-side: bottom;
-}
-
-#description-cell {
-  max-width: 50ch;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 #header-row {
-  display: flex;
-  align-items: center;
   margin-top: 2rem;
   font-size: 30px;
   font-weight: 400;
@@ -52,9 +23,27 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+.cell {
+  display: inline-block;
+  padding-right: 1rem;
+  overflow: hidden;
+  max-width: 15ch;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+#description-cell {
+  max-width: 50ch;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
 .quiz-row:hover {
   box-shadow: 0 0 20px rgb(253, 101, 220);
 }
+
 
 #header-row:hover {
   box-shadow: none;
@@ -75,19 +64,22 @@ body::-webkit-scrollbar-thumb {
 ////////////////////////////////////**MOBILE**////////////////////////////////////
 
 @media only screen and (max-width: 480px) {
-  #description-cell {
-    max-width: 23ch;
+  h1 {
+    font-size: 30px;
   }
 
-#header-row {
-  font-size: 20px;
-}
+
+  #header-row {
+    font-size: 20px;
+  }
+
 
   .quiz-row {
     font-size: 20px;
   }
 
-  h1 {
-    font-size: 30px;
+
+  #description-cell {
+    max-width: 23ch;
   }
 }
