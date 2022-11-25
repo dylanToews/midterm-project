@@ -10,10 +10,10 @@
   <link href="https://fonts.cdnfonts.com/css/homer-simpson-revised" rel="stylesheet">
 
 
- <!--EXTERNAL JS-->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
- integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
- crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--EXTERNAL JS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!--App CSS-->
   <link rel="stylesheet" href="/styles/_nav.css" type="text/css" />
@@ -28,7 +28,6 @@
 <body>
   <%- include('partials/_navbar') %>
 
-
     <!--Page specific Content-->
     <main id="content-container">
       <h1>Test your Simpsons Knowledge! Click quiz to try your luck!</h1>
@@ -42,8 +41,6 @@
           </span>
         </div>
         <span class="cell link">COPY URL</span>
-
-
 
         <% for (let key in quizzes) { %>
           <a href="/quiz/<%= quizzes[key].id %>" class="quiz-row">
@@ -63,15 +60,13 @@
               </span>
             </div>
           </a>
-          <button class="btn" onclick="copyContent(`localhost:8080/quiz/<%= quizzes[key].id %>`)"><i class="fa-solid fa-copy"></i></button>
+          <button class="btn" onclick="copyContent(`localhost:8080/quiz/<%= quizzes[key].id %>`)"><i
+              class="fa-solid fa-copy"></i></button>
           <% } %>
       </div>
     </main>
     <footer>
       <img id="footer-pic" src="https://i.imgur.com/I6i6QM1.png" alt="footer logo">
     </footer>
-
 </body>
-
-
 </html>

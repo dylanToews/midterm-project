@@ -40,7 +40,7 @@ const getQuizFromId = function(id) {
 };
 
 
-// Functions to add quiz content from Create New Quiz page
+// Functions to add quiz content from Create New Quiz page via queries
 
 const addQuiz = function(title, description, private) {
   const queryParams = [];
@@ -98,7 +98,7 @@ const addPrivateBoolean = function(id, private) {
 };
 
 
-// Function for login page
+// Function for querying login page info
 
 const checkEmailAndPassword = function(email, password) {
   const queryParams = [];
