@@ -9,14 +9,13 @@ const copyContent = (input) => {
 
 //Function to varify if chosen answer is correct
 
-const validate = function(answer, correctAnswer, form) {
-  const formname = document.getElementById(form);
+const validate = function(answer) {
 
-  if (answer == correctAnswer) {
-    formname.innerHTML = `<button class="btn" id = "correct-message" onclick="copyContent('localhost:8080/correct')"><i class="fa-solid fa-copy"></i>Wohoo! You're smart! Click to copy link and share results</button>`;
+  if (answer === 'correct_answer') {
+    return '/correct';
   }
   else {
-    formname.innerHTML = `<button class="btn" id = "incorrect-message" onclick="copyContent('localhost:8080/incorrect')"><i class="fa-solid fa-copy"></i>DOH! Wrong. Click to copy link and share results, if you want...</button>`;
+    return '/incorrect';
   }
 };
 
@@ -24,10 +23,10 @@ const validate = function(answer, correctAnswer, form) {
 
 //Functions to shuffle answers everytime quiz page is loaded
 
-const shuffle = function () {
+const shuffle = function() {
   const array = [0, 1, 2, 3];
   return array.sort(() => Math.random() - 0.5);
-}
+};
 
 const getOption = (option, order) => {
   const result = {};
@@ -60,6 +59,6 @@ const shuffleQuestions = qObj => {
 };
 
 
-module.exports = { shuffleQuestions }
+module.exports = { shuffleQuestions, validate }
 
 

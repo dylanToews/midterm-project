@@ -49,7 +49,7 @@
                 Question: <%= quiz.question_content%><span id='a1'></span>
               </div><br>
 
-              <form id="question-form">
+              <form id="question-form"action="/quiz/:id" method="POST">
                 <p>
                   <%= quiz.option0 %>
                 </p>
@@ -71,8 +71,9 @@
                 <input type="radio" name="choice"
                   value="<% if(quiz.correct_answer === quiz.option3){%>correct_answer<% } else{ %>wrong_answer3<% } %>">
                 <br>
-                <input id="create-quiz-button" name= 'onclick' type="submit" value="submit"
-                  onclick="validate(choice.value, 'correct_answer', 'question-form')" />
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
               </form>
             </div>
         </article>

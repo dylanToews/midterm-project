@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="/styles/correct.css" type="text/css" />
 
   <!--Client Facing JS-->
-  <script type="text/javascript" src="/scripts/helpers.js"></script>
+  <script type="text/javascript" src="/scripts/app.js"></script>
 
 </head>
 
@@ -31,11 +31,10 @@
     <main id="content-container">
 
 
-      <div><p>Congratulations!! You were correct.</p> <p>You are a Simpsons Expert!</p>Have a Duff on the house!<p> </p></div>
+      <div><p>Congratulations!! You were correct.</p> <p>You are a Simpsons Expert!</p>Have a Duff on the house and click button to copy link and share your results<p> </p></div>
 
-      <form class="form-inline" action="/correct" method="POST"></form>
-      </form>
-
+      <button class="btn" onclick="copyContent(`localhost:8080/correct`)"><i
+        class="fa-solid fa-copy"></i></button>
     </main>
     <footer>
       <img src="https://i.imgur.com/RCSsDuN.png" alt="Duff">

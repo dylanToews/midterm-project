@@ -25,6 +25,11 @@ router.get('/quiz/:id', (req, res) => {
 });
 
 
+router.post('/quiz/:id', (req, res) => {
+  const choice = req.body.choice;
+
+  res.redirect(helpers.validate(choice));
+});
 
 
 module.exports = router;
