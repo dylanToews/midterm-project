@@ -34,39 +34,44 @@
       <main>
         <article class="quiz-container">
           <section>
-            <p id="creator-name">Created by: <%=quiz.name%>
+            <p id="creator-name">Created by: <%=quiz.fullname%>
             </p>
             <div>
               <p id="quiz-descrip">
-                <%= quiz.description%>
+                Description: <%= quiz.description%>
               </p>
             </div>
           </section>
           <section class="question-wrapper">
             <div>
               <div id="question-title">
-                <%= quiz.question_content%><span id='a1'></span>
+                Question: <%= quiz.question_content%><span id='a1'></span>
               </div><br>
 
               <form id="question-form">
                 <p>
                   <%= quiz.option0 %>
                 </p>
-                <input type="radio" name="choice" value="<% if(quiz.correct_answer === quiz.option0){%>correct_answer<% } else{ %>wrong_answer0<% } %>" >
+                <input type="radio" name="choice"
+                  value="<% if(quiz.correct_answer === quiz.option0){%>correct_answer<% } else{ %>wrong_answer0<% } %>">
                 <p>
                   <%= quiz.option1 %>
                 </p>
-                <input type="radio" name="choice" value="<% if(quiz.correct_answer === quiz.option1){%>correct_answer<% } else{ %>wrong_answer1<% } %>" >
+                <input type="radio" name="choice"
+                  value="<% if(quiz.correct_answer === quiz.option1){%>correct_answer<% } else{ %>wrong_answer1<% } %>">
                 <p>
                   <%= quiz.option2 %>
                 </p>
-                <input type="radio" name="choice" value="<% if(quiz.correct_answer === quiz.option2){%>correct_answer<% } else{ %>wrong_answer2<% } %>" >
+                <input type="radio" name="choice"
+                  value="<% if(quiz.correct_answer === quiz.option2){%>correct_answer<% } else{ %>wrong_answer2<% } %>">
                 <p>
                   <%= quiz.option3 %>
                 </p>
-                <input type="radio" name="choice" value="<% if(quiz.correct_answer === quiz.option3){%>correct_answer<% } else{ %>wrong_answer3<% } %>" >
+                <input type="radio" name="choice"
+                  value="<% if(quiz.correct_answer === quiz.option3){%>correct_answer<% } else{ %>wrong_answer3<% } %>">
                 <br>
-              <input id="create-quiz-button" type="submit" value="submit" onclick="validate(choice.value, 'correct_answer', 'question-form')" />
+                <input id="create-quiz-button" type="submit" value="submit"
+                  onclick="validate(choice.value, 'correct_answer', 'question-form')" />
               </form>
             </div>
         </article>
@@ -80,10 +85,8 @@
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
       <script src="midterm-project/public/scripts/app.js"></script>
-        <!--Client Facing JS-->
+      <!--Client Facing JS-->
 
 </body>
 
 </html>
-
-

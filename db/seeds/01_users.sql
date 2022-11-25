@@ -4,7 +4,7 @@ INSERT INTO users (fullname, email, password) VALUES ('David', 'David@gmail.com'
 INSERT INTO users (fullname, email, password) VALUES ('Dylan', 'Dylan@gmail.com', 'password');
 INSERT INTO users (fullname, email, password) VALUES ('Bob', 'bob@gmail.com', 'password');
 INSERT INTO users (fullname, email, password) VALUES ('Doug', 'Doug@gmail.com', 'password');
-INSERT INTO users (fullname, email, password) VALUES ('lucy', 'lucy@gmail.com', 'password');
+INSERT INTO users (fullname, email, password) VALUES ('Lucy', 'lucy@gmail.com', 'password');
 INSERT INTO users (fullname, email, password) VALUES ('Willow', 'Willow@gmail.com', 'password');
 INSERT INTO users (fullname, email, password) VALUES ('Vaughn', 'Vaughn@gmail.com', 'password');
 INSERT INTO users (fullname, email, password) VALUES ('Deanne', 'Deanne@gmail.com', 'password');

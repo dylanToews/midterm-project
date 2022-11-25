@@ -23,7 +23,6 @@ const getAllQuizzes = () => {
 };
 
 
-
 //To get specific quiz based on ID
 
 const getQuizFromId = function(id) {
@@ -41,6 +40,7 @@ const getQuizFromId = function(id) {
 };
 
 
+// Functions to add quiz content from Create New Quiz page
 
 const addQuiz = function(title, description, private) {
   const queryParams = [];
@@ -86,19 +86,19 @@ const addPrivateBoolean = function(id, private) {
   const queryParams = [];
   let values = '';
 
-  console.log("inside addPrivate", private)
+  console.log("inside addPrivate", private);
   let queryString = `INSERT INTO quizzes (private)
   VALUES ( $1, $2 ) RETURNING * ;`;
 
   return db.query(queryString, [id, private])
     .then(res => {
-      console.log(res.rows[0])
+      console.log(res.rows[0]);
       return res.rows[0];
     });
+};
 
 
-
-}
+// Function for login page. Not in production currently
 
 const checkEmailAndPassword = function(email, password) {
   const queryParams = [];
@@ -111,9 +111,6 @@ const checkEmailAndPassword = function(email, password) {
       return res.rows[0];
     });
 };
-
-
-
 
 
 
