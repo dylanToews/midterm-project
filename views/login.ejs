@@ -18,32 +18,44 @@
   <!--App CSS-->
   <link rel="stylesheet" href="/styles/_nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/homepage.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/login.css" type="text/css" />
 
-  </head>
+</head>
 
-  <body>
+<body>
+  <%- include('partials/_navbar') %>
+    <main id="content-container">
 
-    <div class="card text-center">
-      <div class="card-header"></div>
-      <div class="card-body">
-        <h5 class="card-title">Simps Quiz Login</h5>
+      <div class="card-text-center">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <h5 class="card-title">Login</h5>
+          <form action="/login" method="POST">
+            <p>
+              <label class="login-label" for="email">Enter Email</label>
+              <input id="email" type="email" name="email">
+            </p>
+            <p>
+              <label class="login-label" for="password">Enter Password</label>
+              <input id="password" type="password" name="password">
+            </p>
+            <input id="login-button" type="submit" value="Submit">
 
-    <form action="/login" method="POST">
-      <label for="email">Enter Email</label>
-      <input id="email" type="email" name="email">
-      <label for="password">Enter Password</label>
-      <input id="password" type="password" name="password">
-      <input type="submit" value="Submit">
+          </form>
 
-    </form>
+    </main>
 
 
 
 
 
 
+</body>
 
-  </body>
+<footer id="family-photo">
+  <div>
+    <img src="https://i.imgur.com/2JGA2A3.png" alt="Simps-family">
+  </div>
+</footer>
 
-  </html>
+</html>

@@ -1,0 +1,82 @@
+////////////////////////////////////////////**GLOBAL&DESKTOP//////////////////////////////////////
+h5 {
+  font-size: 45px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+html,
+body {
+  background: rgb(254,212,32);
+  background: linear-gradient(180deg, rgba(254,212,32,1) 22%, rgba(158,69,255,1) 58%);
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  min-height: 100%;
+  font-family: 'Homer Simpson Revised', sans-serif;
+}
+
+#content-container {
+  padding-top: 130px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.row-form {
+  padding-bottom: 3rem;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  width: 50%;
+  font-size: 25px;
+  font-family: 'Homer Simpson Revised', sans-serif;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-style: groove;
+}
+
+
+
+.login-label {
+  width: 45px;
+
+}
+
+#login-button {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(254, 212, 32);
+  width: fit-content;
+  font-size: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+#login-button:hover {
+  background-color: #c5d467
+}
+
+#login-button:active {
+  background-color: #32e46a;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#family-photo {
+  margin-top: 20rem;
+  }
+
+
+
+////////////////////////////////////**MOBILE**////////////////////////////////////
+
+@media only screen and (max-width: 480px) {
+  #family-photo {
+    margin-top: 10rem;
+    }
+}
