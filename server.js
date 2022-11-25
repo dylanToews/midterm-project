@@ -37,12 +37,12 @@ app.use(session({
 const userApiRoutes = require('./routes/users-api');
 const widgetApiRoutes = require('./routes/widgets-api');
 const usersRoutes = require('./routes/users');
-const quizzesRoutes = require('./routes/ind-quiz');
-const createRoutes = require('./routes/create-quiz');
+const quizzesRoutes = require('./routes/quiz-routes');
+const createRoutes = require('./routes/create-routes');
 const indexRoutes = require('./routes/index-routes');
 const loginRoutes = require('./routes/login-routes');
-const correctAnswer = require('./routes/correct');
-const incorrectAnswer = require('./routes/incorrect');
+const correctAnswer = require('./routes/correct-routes');
+const incorrectAnswer = require('./routes/incorrect-routes');
 
 
 

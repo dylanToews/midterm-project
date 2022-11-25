@@ -6,7 +6,6 @@ const router = express.Router();
 router.get('/correct', (req, res) => {
   console.log('answers');
   res.render("correct");
-  //res.render('answers');
 });
 
 module.exports = router;
