@@ -71,7 +71,7 @@
                 <input type="radio" name="choice"
                   value="<% if(quiz.correct_answer === quiz.option3){%>correct_answer<% } else{ %>wrong_answer3<% } %>">
                 <br>
-                <input id="create-quiz-button" type="submit" value="submit"
+                <input id="create-quiz-button" name= 'onclick' type="submit" value="submit"
                   onclick="validate(choice.value, 'correct_answer', 'question-form')" />
               </form>
             </div>

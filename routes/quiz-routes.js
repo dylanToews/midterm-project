@@ -4,7 +4,7 @@ const quizQueries = require('../db/queries/queries');
 const helpers = require('../public/scripts/app');
 
 
-//Route to render quiz page 
+//Route to render quiz page
 
 router.get('/quiz/:id', (req, res) => {
   const id = req.params.id;
@@ -23,6 +23,8 @@ router.get('/quiz/:id', (req, res) => {
         .json({ error: err.message });
     });
 });
+
+
 
 
 module.exports = router;
